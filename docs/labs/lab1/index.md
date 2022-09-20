@@ -1,11 +1,14 @@
-# Aula prática 1
+# Lab 1
 
-## Objectivo
+## Objectives
 
-1. Exemplificar como se pode utilizar o Spark no Google Colab.
+1. MapReduce programming model in pure Python;
 
-2. Resolução de exercícios simples de Spark Streaming...
+2. Execution of MapReduce in standalone Hadoop;
 
-## Materiais:
+3. MapReduce Programming Exercise.
 
-[Lab1](https://github.com/smduarte/ps2022/blob/main/lab1/ps2022_lab1.ipynb)
+## Materials:
+
+[MapReduce examples](https://github.com/smduarte/spbd-2223/blob/main/lab1/SPBD_Labs_mapreduce1.ipynb)
+[MapReduce exercise](https://github.com/smduarte/spbd-2223/blob/main/lab1/SPBD_Labs_mapreduce1_exercise.ipynb)
