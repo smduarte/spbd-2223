@@ -1,7 +1,6 @@
-# Anúncios
+# Announcements
 
-* **7-mar-2021**: As aulas teóricas e práticas começam na semana de 7 de março. 
-
+Classes will start on the 21th of September.
 
 
 
