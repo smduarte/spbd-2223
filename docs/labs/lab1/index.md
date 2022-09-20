@@ -11,4 +11,5 @@
 ## Materials:
 
 [MapReduce examples](https://github.com/smduarte/spbd-2223/blob/main/lab1/SPBD_Labs_mapreduce1.ipynb)
+
 [MapReduce exercise](https://github.com/smduarte/spbd-2223/blob/main/lab1/SPBD_Labs_mapreduce1_exercise.ipynb)
