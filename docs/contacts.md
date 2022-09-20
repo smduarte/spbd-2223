@@ -1,4 +1,4 @@
-# People
+# Contact
   
 * [Sérgio Duarte] <br />
   **Email:** smd@fct.unl.pt<br />
