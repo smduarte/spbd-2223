@@ -2,9 +2,9 @@
 
 ## Objectives
 
-+ MapReduce programming model in pure Python;
++ MapReduce in pure Python;
 
-+ Execution of MapReduce in standalone Hadoop;
++ Execution of MapReduce in Hadoop standalone mode;
 
 + MapReduce Programming Exercise.
 
