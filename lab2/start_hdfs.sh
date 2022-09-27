@@ -1,4 +1,6 @@
 #!/bin/bash
+apt-get install -y openssh-server
+/etc/init.d/ssh start
 
 HADOOP=hadoop-3.3.4
 HADOOP_HOME=/usr/local/$HADOOP
