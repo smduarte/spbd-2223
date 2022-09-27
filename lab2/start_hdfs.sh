@@ -37,7 +37,7 @@ export HDFS_SECONDARYNAMENODE_USER="root"
 export YARN_RESOURCEMANAGER_USER="root"
 export YARN_NODEMANAGER_USER="root"
 
-cat $HADOOP_HOME/etc/hadoop/sbin/start-dfs.sh << EOF
+cat > $HADOOP_HOME/etc/hadoop/sbin/start-dfs.sh << EOF
 #!/usr/bin/env bash
 
 echo "starting dfs daemons"
