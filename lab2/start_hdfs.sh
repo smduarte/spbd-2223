@@ -40,6 +40,10 @@ export YARN_NODEMANAGER_USER="root"
 cat > $HADOOP_HOME/sbin/start-dfs.sh << EOF
 #!/usr/bin/env bash
 
+HADOOP=hadoop-3.3.4
+HADOOP_HOME=/usr/local/$HADOOP
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
 echo "starting dfs daemons"
 
 hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start namenode
