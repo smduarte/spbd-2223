@@ -51,3 +51,5 @@ hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start secondarynamenode
 hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start datanode
 
 EOF
+$HADOOP_HOME/sbin/start-dfs.sh
+hadoop fs -mkdir -p root
