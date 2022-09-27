@@ -1,6 +1,6 @@
 #!/bin/bash
-apt-get install -y openssh-server
-/etc/init.d/ssh start
+#apt-get install -y openssh-server
+#/etc/init.d/ssh start
 
 HADOOP=hadoop-3.3.4
 HADOOP_HOME=/usr/local/$HADOOP
@@ -25,9 +25,9 @@ cat > $HADOOP_HOME/etc/hadoop/hdfs-site.xml << EOF
     </property>
 </configuration>
 EOF
-rm -f ~/.ssh/id_rsa ; ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-chmod 0600 ~/.ssh/authorized_keys
+#rm -f ~/.ssh/id_rsa ; ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+#cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+#chmod 0600 ~/.ssh/authorized_keys
 
 $HADOOP_HOME/bin/hdfs namenode -format
 
@@ -37,4 +37,13 @@ export HDFS_SECONDARYNAMENODE_USER="root"
 export YARN_RESOURCEMANAGER_USER="root"
 export YARN_NODEMANAGER_USER="root"
 
-$HADOOP_HOME/sbin/start-dfs.sh
+cat $HADOOP_HOME/etc/hadoop/sbin/start-dfs.sh << EOF
+#!/usr/bin/env bash
+
+echo "starting dfs daemons"
+
+hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start namenode
+hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start secondarynamenode
+hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start datanode
+
+EOF
