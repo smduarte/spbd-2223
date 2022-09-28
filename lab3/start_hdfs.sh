@@ -41,7 +41,7 @@ cat > $HADOOP_HOME/etc/hadoop/mapred-site.xml << EOF
 <configuration>
   <property> 
     <name>mapreduce.framework.name</name> 
-    <value>yarn</value> 
+    <value>local</value> 
   </property>
 </configuration>
 EOF
@@ -115,5 +115,5 @@ EOF
 
 
 $HADOOP_HOME/sbin/start-dfs.sh
-$HADOOP_HOME/sbin/start-yarn.sh
+#$HADOOP_HOME/sbin/start-yarn.sh
 hadoop fs -mkdir -p root
