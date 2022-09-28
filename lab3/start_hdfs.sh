@@ -13,6 +13,11 @@ cat > $HADOOP_HOME/etc/hadoop/core-site.xml << EOF
         <name>fs.defaultFS</name>
         <value>hdfs://localhost:9000</value>
     </property>
+    <property>
+      <name>hadoop.tmp.dir</name>
+      <value>/tmp</value>
+      <description>A base for other temporary directories.</description>
+    </property>
 </configuration>
 EOF
 cat > $HADOOP_HOME/etc/hadoop/hdfs-site.xml << EOF
@@ -23,12 +28,55 @@ cat > $HADOOP_HOME/etc/hadoop/hdfs-site.xml << EOF
         <name>dfs.replication</name>
         <value>1</value>
     </property>
+    <property>
+      <name>hadoop.tmp.dir</name>
+      <value>/tmp</value>
+      <description>A base for other temporary directories.</description>
+    </property>
 </configuration>
 EOF
-#rm -f ~/.ssh/id_rsa ; ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-#cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-#chmod 0600 ~/.ssh/authorized_keys
-
+cat > $HADOOP_HOME/etc/hadoop/mapred-site.xml << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property> 
+    <name>mapreduce.framework.name</name> 
+    <value>yarn</value> 
+  </property>
+</configuration>
+EOF
+cat > $HADOOP_HOME/etc/hadoop/yarn-site.xml << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- Site specific YARN configuration properties -->
+    <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>128</value>
+        <description>Minimum limit of memory to allocate to each container request at the Resource Manager.</description>
+    </property>
+    <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>2048</value>
+        <description>Maximum limit of memory to allocate to each container request at the Resource Manager.</description>
+    </property>
+    <property>
+        <name>yarn.scheduler.minimum-allocation-vcores</name>
+        <value>1</value>
+        <description>The minimum allocation for every container request at the RM, in terms of virtual CPU cores. Requests lower than this won't take effect, and the specified value will get allocated the minimum.</description>
+    </property>
+    <property>
+        <name>yarn.scheduler.maximum-allocation-vcores</name>
+        <value>2</value>
+        <description>The maximum allocation for every container request at the RM, in terms of virtual CPU cores. Requests higher than this won't take effect, and will get capped to this value.</description>
+    </property>
+    <property>
+        <name>yarn.nodemanager.resource.memory-mb</name>
+        <value>4096</value>
+        <description>Physical memory, in MB, to be made available to running containers</description>
+    </property>
+    <property>
+EOF
 $HADOOP_HOME/bin/hdfs namenode -format
 
 export HDFS_NAMENODE_USER="root"
