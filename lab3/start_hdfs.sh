@@ -41,7 +41,7 @@ cat > $HADOOP_HOME/etc/hadoop/mapred-site.xml << EOF
 <configuration>
   <property> 
     <name>mapreduce.framework.name</name> 
-    <value>local</value> 
+    <value>yarn</value> 
   </property>
 </configuration>
 EOF
