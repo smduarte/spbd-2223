@@ -75,7 +75,7 @@ cat > $HADOOP_HOME/etc/hadoop/yarn-site.xml << EOF
         <value>4096</value>
         <description>Physical memory, in MB, to be made available to running containers</description>
     </property>
-    <property>
+</configuration>
 EOF
 $HADOOP_HOME/bin/hdfs namenode -format
 
