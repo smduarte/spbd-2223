@@ -99,5 +99,20 @@ hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start secondarynamenode
 hadoop-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start datanode
 
 EOF
+
+cat > $HADOOP_HOME/sbin/start-yarn.sh << EOF
+#!/usr/bin/env bash
+
+HADOOP=hadoop-3.3.4
+HADOOP_HOME=/usr/local/$HADOOP
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
+echo "starting yarn daemons"
+
+yarn-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start resourcemanager
+yarn-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start nodemanager
+EOF
+
+
 $HADOOP_HOME/sbin/start-dfs.sh
 hadoop fs -mkdir -p root
