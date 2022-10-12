@@ -1,14 +1,11 @@
-# Lab 2
+# Lab 3
 
 ## Objectives
 
-+ [MrJob](https://mrjob.readthedocs.io/en/latest/index.html) library for MapReduce in pure Python;
-
-+ MapReduce Programming Exercises.
++ [Spark Core](https://spark.apache.org/docs/latest/api/python/) programming, using Python (Pyspark);
 
 ## Materials:
-[Solution to Lab1 Exercise](https://github.com/smduarte/spbd-2223/blob/main/lab2/SPBD_Labs_mapreduce1_exercise_solution.ipynb)
+[Solution to Lab2 Exercise](https://github.com/smduarte/spbd-2223/blob/main/lab3/SPBD_Labs_mapreduce2_exercise_solution.ipynb)
 
-[MrJb + MapReduce example](https://github.com/smduarte/spbd-2223/blob/main/lab2/SPBD_Labs_mapreduce2.ipynb)
 
-[Exercises](https://github.com/smduarte/spbd-2223/blob/main/lab2/SPBD_Labs_mapreduce2_exercise.ipynb)
+[Exercises](https://github.com/smduarte/spbd-2223/blob/main/lab3/SPBD_Labs_spark1_exercise.ipynb)
