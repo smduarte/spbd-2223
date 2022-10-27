@@ -113,7 +113,12 @@ yarn-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start resourcemanager
 yarn-daemon.sh --config $HADOOP_HOME/etc/hadoop/ start nodemanager
 EOF
 
-
 $HADOOP_HOME/sbin/start-dfs.sh
 #$HADOOP_HOME/sbin/start-yarn.sh
 hadoop fs -mkdir -p root
+
+export PIG_HOME=/opt/pig-0.17.0
+mkdir -p $PIG_HOME
+cd $PIG_HOME
+wget -O /tmp/pig.tgz https://dlcdn.apache.org/pig/latest/pig-0.17.0.tar.gz
+tar xfz /tmp/pig.tgz
