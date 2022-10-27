@@ -4,6 +4,7 @@
 * [Lab 2](lab2) - MrJob + MapReduce;
 * [Lab 3](lab3) - Spark Core (PySpark);
 * [Lab 4](lab4) - Spark Dataframes (PySpark);
+* [Lab 5](lab5) - Spark SQL (PySpark);
 
 
 ## Labs Assigment Group Registration
