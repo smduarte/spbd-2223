@@ -5,6 +5,16 @@
 HADOOP=hadoop-3.3.4
 HADOOP_HOME=/usr/local/$HADOOP
 
+wget -q https://downloads.apache.org/hadoop/common/$HADOOP/$HADOOP.tar.gz
+tar -xzf $HADOOP.tar.gz
+mv $HADOOP/ /usr/local/
+echo "export JAVA_HOME="`readlink -f /usr/bin/java | sed "s:bin/java::"` >> /usr/local/$HADOOP/etc/hadoop/hadoop-env.sh
+
+echo "#!/bin/bash" > /usr/local/bin/hadoop
+echo "exec /usr/local/$HADOOP/bin/hadoop \$*" >> /usr/local/bin/hadoop
+chmod a+x /usr/local/bin/hadoop
+
+
 cat > $HADOOP_HOME/etc/hadoop/core-site.xml << EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
