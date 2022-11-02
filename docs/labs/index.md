@@ -6,6 +6,9 @@
 * [Lab 4](lab4) - Spark Dataframes (PySpark);
 * [Lab 5](lab5) - Spark SQL (PySpark);
 
+# Project Assignment
+
+The initial draft version of the project assignment can be found [here](https://github.com/smduarte/spbd-2223/blob/main/proj/spbd2122_proj.ipynb).
 
 ## Labs Assigment Group Registration
 
