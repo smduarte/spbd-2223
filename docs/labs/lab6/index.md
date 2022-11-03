@@ -1,11 +1,8 @@
-# Lab 5
+# Lab 6
 
 ## Objectives
-
-+ [Spark SQL](https://spark.apache.org/docs/latest/api/python/) programming, using Python Spark SQL statements (Pyspark).
++ [Project Assignment](https://github.com/smduarte/spbd-2223/blob/main/proj/spbd2122_proj.ipynb)
 
 ## Materials:
-[Solution to Lab4 Exercises](https://github.com/smduarte/spbd-2223/blob/main/lab5/SPBD_Labs_spark2_exercise_solution.ipynb)
+[Solution to Lab5 Exercises](https://github.com/smduarte/spbd-2223/blob/main/lab6/SPBD_Labs_spark3_exercise_solution.ipynb)
 
-
-[Exercises](https://github.com/smduarte/spbd-2223/blob/main/lab5/SPBD_Labs_spark3_exercise.ipynb)
