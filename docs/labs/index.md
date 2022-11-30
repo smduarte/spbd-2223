@@ -6,6 +6,7 @@
 * [Lab 4](lab4) - Spark Dataframes (PySpark);
 * [Lab 5](lab5) - Spark SQL (PySpark);
 * [Lab 6](lab6) - Project Assignment;
+* [Lab 10](lab10) - GraphFrames/GraphX Example;
 
 # Project Assignment
 
