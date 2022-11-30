@@ -1,8 +1,7 @@
-# Lab 6
+# Lab 10
 
 ## Objectives
-+ [Project Assignment](https://github.com/smduarte/spbd-2223/blob/main/proj/spbd2122_proj.ipynb)
-
+ (GraphFrames)[https://graphframes.github.io/graphframes/docs/_site/index.html]
 ## Materials:
-[Solution to Lab5 Exercises](https://github.com/smduarte/spbd-2223/blob/main/lab6/SPBD_Labs_spark3_exercise_solution.ipynb)
+[Connected Components Example](https://github.com/smduarte/spbd-2223/blob/main/lab10/spbd2122-graphframes-connected-components.ipynb)
 
